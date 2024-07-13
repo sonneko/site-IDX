@@ -107,7 +107,7 @@ function Structure(props) {
                 <>
                   <a href="/index">ホーム</a>
                   --
-                  <a href="/group/index">グループ</a>
+                  <a href="/group/index">班について</a>
                 </>
             )
             break;
@@ -116,7 +116,7 @@ function Structure(props) {
                 <>
                   <a href="/index">ホーム</a>
                   --
-                  <a href="/group/index">グループ</a>
+                  <a href="/group/index">班について</a>
                   --
                   <a href="#">{props.head.title}</a>
                 </>
@@ -149,3 +149,5 @@ function Structure(props) {
             break;
     }
 }
+
+export default Structure;

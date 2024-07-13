@@ -5,3 +5,5 @@ function MovingButton() {
         </div>
     )
 }
+
+export default MovingButton;

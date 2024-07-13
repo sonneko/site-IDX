@@ -1,6 +1,12 @@
-  dfvfdfv 
-  c
-cs
-{e@levev,evvvv3vwqvqv@  @pql[v
-    ¥
-]}
+
+
+function Renewal(props) {
+  return (
+    <div className="renewal">
+      {props.head.renewal + "更新"}
+    </div>
+  )
+}
+
+
+export default Renewal;

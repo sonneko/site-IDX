@@ -10,3 +10,5 @@ function Reference(props) {
         </div>
     )
 }
+
+export default Reference;
