@@ -36,7 +36,30 @@ example:
 */
 
 
-function IndexLinks(e) {
+function IndexLinks(props) {
+    const e = props;
     const html = e.html;
-
+    const headings = html.match(/<h[1-6]>([^<]*)<\/h[1-6]>/g);
+    let toc = [];
+    if (headings) {
+        headings.forEach(heading => {
+            const headingText = heading.match(/<h[1-6]>([^<]*)<\/h[1-6]>/)[1];
+            toc.push({
+                text: headingText,
+                id: headingText.replace(/ /g, '-').toLowerCase()
+            });
+        });
+    }
+    return (
+        <div className="indexLinks">
+        {
+            '<ul class="toc">' +
+            toc.map(item => `<li><a href="#${item.id}">${item.text}</a></li>`).join('') +
+            '</ul>'
+        }
+        </div>
+    )
 }
+
+
+export default IndexLinks;

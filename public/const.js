@@ -133,3 +133,17 @@ const memberInfo = () => {
         autumn: {name: "autumn", intro: ""}
     };
 }
+
+const categoryInfo = () => {
+    return {
+        biography: "生物",
+        chemistry: "化学",
+        geography: "地理",
+        information: "情報",
+        language: "言語",
+        math: "数学",
+        mechanic: "技術",
+        physics: "物理",
+    };
+}
+

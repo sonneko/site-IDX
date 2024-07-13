@@ -8,7 +8,8 @@ const member = memberInfo();
 if (location.type !== "index") console.error("description: not index page")
 
 
-function EditorInfo(who) {
+function EditorInfo(props) {
+    const who = props.who;
     const name = member[who].name;
     const intro = member[who].intro;
     return (

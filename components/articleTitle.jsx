@@ -4,11 +4,11 @@ const location = getLocation();
 
 if (location.type !== "blog") console.error("articleTitle: not blog page")
 
-function articleTitle(content) {
+function articleTitle(props) {
     return (
     <div className="articleTitle">
         <h1>
-            {content}
+            {props.head.title}
         </h1>
     </div>
     )
