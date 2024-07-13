@@ -121,5 +121,31 @@ function Structure(props) {
                   <a href="#">{props.head.title}</a>
                 </>
             )
+            break;
+        case "intro":
+            return (
+                <>
+                  <a href="/index">ホーム</a>
+                  --
+                  <a href="#">自己紹介</a>
+                </>
+            )
+            break;
+        case "comment":
+            return (
+                <>
+                  <a href="/index">ホーム</a>
+                  --
+                  <a href="#">コメント</a>
+                </>
+            )
+            break;
+        case "index":
+            return (
+                <>
+                  <a href="/index">ホーム</a>
+                </>
+            )
+            break;
     }
 }
