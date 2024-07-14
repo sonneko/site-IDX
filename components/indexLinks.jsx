@@ -37,7 +37,7 @@ example:
 
 
 function IndexLinks(props) {
-    const e = props;
+    const e = props.data;
     const html = e.html;
     const headings = html.match(/<h[1-6]>([^<]*)<\/h[1-6]>/g);
     let toc = [];

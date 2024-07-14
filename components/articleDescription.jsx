@@ -5,10 +5,11 @@ const location = getLocation();
 if (location.type !== "blog") console.error("articleDescription: not blog page")
 
 function ArticleDescription(props) {
+    const data = props.data;
     return (
     <div className="articleDescription">
         <p>
-            {props.head.description}
+            {data.head.description}
         </p>
     </div>
     )

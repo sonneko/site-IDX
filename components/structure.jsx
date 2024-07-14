@@ -39,7 +39,7 @@ function Structure(props) {
                   --
                   <a href="/blog/{category}">{categoryInfo()[category]}</a>
                   --
-                  <a href="#">{props.head.title}</a>
+                  <a href="#">{props.data.head.title}</a>
                 </>
             )
             break;
@@ -59,7 +59,7 @@ function Structure(props) {
                   --
                   <a href="/trivia/index">毎日雑学</a>
                   --
-                  <a href="#">{props.head.title}</a>
+                  <a href="#">{props.data.head.title}</a>
                 </>)
             break;
         case "memberIndex":
@@ -98,7 +98,7 @@ function Structure(props) {
                   --
                   <a href="/contest/index">コンテスト</a>
                   --
-                  <a href="#">{props.head.title}</a>
+                  <a href="#">{props.data.head.title}</a>
                 </>
             )
             break;
@@ -118,7 +118,7 @@ function Structure(props) {
                   --
                   <a href="/group/index">班について</a>
                   --
-                  <a href="#">{props.head.title}</a>
+                  <a href="#">{props.data.head.title}</a>
                 </>
             )
             break;
