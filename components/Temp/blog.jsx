@@ -1,7 +1,17 @@
+import { stringify } from "postcss";
 import { iconImage } from "./const/js";
 import { getLocation } from "./const/js";
 
 const location = getLocation();
+
+function getNextPrev() {
+    const nextUrl = "/blog/" + string(location.id + 1);
+    const prevUrl = "/blog/" + string(location.id - 1);
+    return {
+        nextUrl: nextUrl,
+        prevUrl: prevUrl
+    };
+}
 
 function getType() {
     const location = window.location.href;
@@ -13,37 +23,6 @@ function getType() {
     }
 }
 
-function Next() {
-    if (location.s === "blogArticle" || location.s === "triviaArticle") {
-        if (location.id === 1) {
-            const str = string(location.id + 1);
-            let zero;
-            for (let i = str.length; i <= 4; i++) {
-                zero += "0";
-            }
-            const nextUrl = "/" + location.type + "/" + zero + str;
-            return (
-                <link rel="next" href={nextUrl} />
-            )
-        } else {
-            const str = string(location.id + 1);
-            let zero;
-            for (let i = str.length; i <= 4; i++) {
-                zero += "0";
-            }
-            const nextUrl = "/" + location.type + "/" + zero + str;
-            return (
-                <link rel="next" href={nextUrl} />
-            )
-        }
-    }
-}
-
-function Prev() {
-    return(
-        <></>
-    )
-}
 
 function Temp(props) {
     return (
@@ -75,9 +54,15 @@ function Temp(props) {
                 <link rel="msapplication-TileImage" content={iconImage().s150} />
                 <link rel="msapplication-TileColor" content="#FFFDFA" />
 
-                <Next />
-                <Prev/>
+                <link rel="next" href={getNextPrev().nextUrl} />
+                <link rel="prev" href={getNextPrev().prevUrl} />
+                
+                <link rel="stylesheet" href="/css/style.css" />
             </head>
+
+            <body>
+                
+            </body>
           </html>
         </>
     )
