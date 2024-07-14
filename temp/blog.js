@@ -1,4 +1,7 @@
 import { iconImage } from "./const/js";
+import { getLocation } from "./const/js";
+
+const location = getLocation();
 
 function getType() {
     const location = window.location.href;
@@ -10,7 +13,37 @@ function getType() {
     }
 }
 
+function Next() {
+    if (location.s === "blogArticle" || location.s === "triviaArticle") {
+        if (location.id === 1) {
+            const str = string(location.id + 1);
+            let zero;
+            for (let i = str.length; i <= 4; i++) {
+                zero += "0";
+            }
+            const nextUrl = "/" + location.type + "/" + zero + str;
+            return (
+                <link rel="next" href={nextUrl} />
+            )
+        } else {
+            const str = string(location.id + 1);
+            let zero;
+            for (let i = str.length; i <= 4; i++) {
+                zero += "0";
+            }
+            const nextUrl = "/" + location.type + "/" + zero + str;
+            return (
+                <link rel="next" href={nextUrl} />
+            )
+        }
+    }
+}
 
+function Prev() {
+    return(
+        <></>
+    )
+}
 
 function Temp(props) {
     return (
@@ -40,7 +73,10 @@ function Temp(props) {
                 <link rel="icon" sizes="62x62" href={iconImage().s62} />
                 <link rel="apple-touch-icon-precomposed" href={iconImage().s150} />
                 <link rel="msapplication-TileImage" content={iconImage().s150} />
-                <link rel="msapplication-TileColor" content="" />
+                <link rel="msapplication-TileColor" content="#FFFDFA" />
+
+                <Next />
+                <Prev/>
             </head>
           </html>
         </>
