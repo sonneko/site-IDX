@@ -1,6 +1,28 @@
 import { stringify } from "postcss";
 import { iconImage } from "./const/js";
 import { getLocation } from "./const/js";
+import ArticleDescription from "../articleDescription";
+
+//components
+import Category from "../category";
+import Next from "../next";
+import Previous from "../previous";
+import Tag from "../tag";
+import RenewalDate from "../renewalDate";
+import Title from "../title";
+import Reference from "../reference";
+import OtherArticle from "../otherArticle";
+import EditorInfo from "../editorInfo";
+import SocialMedia from "../socialMedia";
+import Copylight from "../copylight";
+import Search from "../search";
+import HomeLink from "../homeLink";
+import IndexLinks from "../indexLinks";
+import ArticleTitle from "../articleTitle";
+import MovingButton from "../movingButton";
+import Hamburger from "../hamburger";
+import XLinks from "../xLinks";
+import Description from "../description";
 
 const location = getLocation();
 
@@ -61,7 +83,46 @@ function Temp(props) {
             </head>
 
             <body>
-                
+               <div className="headerCommon">
+               <Title />
+               <Next />
+               <Previous />
+               <Tag />
+               <RenewalDate />
+               <ArticleDescription />
+               <ArticleTitle />
+               </div>
+
+               <div className="main">
+               <IndexLinks />
+               {props.html}
+               <Reference />
+               </div>
+
+               <div className="footer">
+               <Previous />
+               <Next />
+               <OtherArticle />
+               <EditorInfo />
+               <SocialMedia />
+               <HomeLink />
+               <Category />
+               <Search />
+               <Title />
+               <Description />
+               <Copylight />
+               </div>
+
+               <div className="constant">
+               <Hamburger />
+               <Search />
+               <XLinks />
+               <Title />
+               <SocialMedia />
+               <MovingButton />
+               <OtherArticle />
+               <Search />
+               </div>
             </body>
           </html>
         </>
