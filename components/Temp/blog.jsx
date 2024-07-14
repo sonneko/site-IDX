@@ -1,4 +1,3 @@
-import { stringify } from "postcss";
 import { iconImage } from "./const/js";
 import { getLocation } from "./const/js";
 import ArticleDescription from "../articleDescription";
@@ -46,6 +45,7 @@ function getType() {
 }
 
 
+
 function Temp(props) {
     return (
         <>
@@ -55,14 +55,14 @@ function Temp(props) {
                 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
                 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-                <title>{props.head.title}</title>
-                <meta name="description" content={props.head.title} />
+                <title>{props.data.head.title}</title>
+                <meta name="description" content={props.data.head.title} />
 
                 <meta property="og:url" content={window.location.href}/>
-                <meta property="og:title" content={props.head.title} />
+                <meta property="og:title" content={props.data.head.title} />
                 <meta property="og:type" content={getType()} />
-                <meta property="og:description" content={props.head.description} />
-                <meta property="og:image" content={props.head.image} />
+                <meta property="og:description" content={props.data.head.description} />
+                <meta property="og:image" content={props.data.head.image} />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:site" content="Team_Aoristos" />
                 <meta poperty="og:site_name" content="Team Aoristos公式サイト" />
@@ -84,44 +84,44 @@ function Temp(props) {
 
             <body>
                <div className="headerCommon">
-               <Title />
-               <Next />
-               <Previous />
-               <Tag />
-               <RenewalDate />
-               <ArticleDescription />
-               <ArticleTitle />
+               <Title data={props.data} />
+               <Next data={props.data} />
+               <Previous data={props.data} />
+               <Tag data={props.data} />
+               <RenewalDate data={props.data} />
+               <ArticleDescription data={props.data} />
+               <ArticleTitle data={props.data} />
                </div>
 
                <div className="main">
-               <IndexLinks />
-               {props.html}
-               <Reference />
+               <IndexLinks data={props.data} />
+               {props.data.html}
+               <Reference data={props.data} />
                </div>
 
                <div className="footer">
-               <Previous />
-               <Next />
-               <OtherArticle />
-               <EditorInfo />
-               <SocialMedia />
-               <HomeLink />
-               <Category />
-               <Search />
-               <Title />
-               <Description />
-               <Copylight />
+               <Previous data={props.data} />
+               <Next data={props.data} />
+               <OtherArticle data={props.data} />
+               <EditorInfo data={props.data} />
+               <SocialMedia data={props.data} />
+               <HomeLink data={props.data} />
+               <Category data={props.data} />
+               <Search data={props.data} />
+               <Title data={props.data} />
+               <Description data={props.data} />
+               <Copylight data={props.data} />
                </div>
 
                <div className="constant">
-               <Hamburger />
-               <Search />
-               <XLinks />
-               <Title />
-               <SocialMedia />
-               <MovingButton />
-               <OtherArticle />
-               <Search />
+               <Hamburger data={props.data} />
+               <Search data={props.data} />
+               <XLinks data={props.data} />
+               <Title data={props.data} />
+               <SocialMedia data={props.data} />
+               <MovingButton data={props.data} />
+               <OtherArticle data={props.data} />
+               <Search data={props.data} />
                </div>
             </body>
           </html>

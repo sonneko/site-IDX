@@ -9,4 +9,4 @@ function XLinks() {
     )
 }
 
-export default Xlinks;
+export default XLinks;

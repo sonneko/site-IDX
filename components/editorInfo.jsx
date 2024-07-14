@@ -9,7 +9,7 @@ if (location.type !== "index") console.error("description: not index page")
 
 
 function EditorInfo(props) {
-    const who = props.who;
+    const who = props.data.who;
     const name = member[who].name;
     const intro = member[who].intro;
     return (

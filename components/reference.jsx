@@ -1,7 +1,7 @@
 
 
 function Reference(props) {
-    const refer = props.reference;
+    const refer = props.data.reference;
     return (
         <div className="reference">
             <ul>
