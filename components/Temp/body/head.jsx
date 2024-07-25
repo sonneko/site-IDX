@@ -2,6 +2,7 @@ import { iconImage } from "./const/js";
 import { getLocation } from "./const/js";
 import ArticleDescription from "../articleDescription";
 
+
 //components
 import Category from "../category";
 import Next from "../next";
@@ -23,7 +24,6 @@ import Hamburger from "../hamburger";
 import XLinks from "../xLinks";
 import Description from "../description";
 
-const location = getLocation();
 
 function getNextPrev() {
     const nextUrl = "/blog/" + string(location.id + 1);
@@ -46,10 +46,10 @@ function getType() {
 
 
 
-function Temp(props) {
+function Head(props) {
+    const location = getLocation();
     return (
         <>
-          <html>
             <head>
                 <meta charset="utf-8" />
                 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -81,54 +81,8 @@ function Temp(props) {
                 
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
-
-            <body>
-               <div className="headerCommon">
-               <Title data={props.data} />
-               <Next data={props.data} />
-               <Previous data={props.data} />
-               <Tag data={props.data} />
-               <RenewalDate data={props.data} />
-               <ArticleDescription data={props.data} />
-               <ArticleTitle data={props.data} />
-               </div>
-
-               <div className="main">
-               <IndexLinks data={props.data} />
-               {props.data.html}
-               <Reference data={props.data} />
-               </div>
-
-               <div className="footer">
-               <Previous data={props.data} />
-               <Next data={props.data} />
-               <OtherArticle data={props.data} />
-               <EditorInfo data={props.data} />
-               <SocialMedia data={props.data} />
-               <HomeLink data={props.data} />
-               <Category data={props.data} />
-               <Search data={props.data} />
-               <Title data={props.data} />
-               <Description data={props.data} />
-               <Copylight data={props.data} />
-               </div>
-
-               <div className="constant">
-               <Hamburger data={props.data} />
-               <Search data={props.data} />
-               <XLinks data={props.data} />
-               <Title data={props.data} />
-               <SocialMedia data={props.data} />
-               <MovingButton data={props.data} />
-               <OtherArticle data={props.data} />
-               <Search data={props.data} />
-               </div>
-            </body>
-          </html>
         </>
     )
 }
 
-
-
-export default Temp;
+export default Head;
