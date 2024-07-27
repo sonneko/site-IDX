@@ -12,8 +12,13 @@ import Header from "./body/header.jsx"
 /*
     necessary data set;
         <MemberTemp data={{
-            title: "",
-            html: "",
+            title: "TITLE STRING",
+            html: "HTML DATA",
+            visualImage: "VISUAL IMAGE PATH",
+            index: [
+                {direc: "LAYER NUMBER", visual: "DISPLAY HEADLINE STRING" path: "HEADLINE PATH"},
+                {direc: "LAYER NUMBER", visual: "DISPLAY HEADLINE STRING" path: "HEADLINE PATH"},
+            ]
         }} />
 */
 
@@ -26,6 +31,9 @@ function BlogTemp(props) {
                     <Constant />
                     <Header />
                     <main>
+                        <h1>{props.data.title}</h1>
+                        <img src={props.data.visualImage} width="80%" height="40%" />
+                        
                         {props.data.html}
                     </main>
                     <Footer />

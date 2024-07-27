@@ -7,7 +7,7 @@ import { getName } from "/const.js";
 /*
     necessary data set;
     <MemberTemp data={
-        memberId: "MEMBER ID",
+        title: "MEMBER ID",
         html: "CONTENT HTML DATA",
         visualImage: "VISUAL IMAGE PATH",
         index: [
